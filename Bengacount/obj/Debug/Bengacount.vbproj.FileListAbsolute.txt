@@ -1,0 +1,100 @@
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\bin\Debug\Bengacount.exe
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\bin\Debug\Bengacount.pdb
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\bin\Debug\Bengacount.xml
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.login.resources
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.MDIParent1.resources
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.Resources.resources
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.exe
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.xml
+C:\Users\NASIM\AppData\Local\Temporary Projects\Bengacount\obj\Debug\Bengacount.pdb
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.exe
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.xml
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.pdb
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\bin\Debug\Bengacount.exe
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\bin\Debug\Bengacount.pdb
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\bin\Debug\Bengacount.xml
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.Resources.resources
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.login_form.resources
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.Main_form.resources
+C:\Users\NASIM\Documents\Visual Studio 2008\Projects\Bengacount\Bengacount\obj\Debug\Bengacount.Shell.resources
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.exe
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.xml
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.pdb
+G:\ \Bengali Billing System\Bengacount\bin\Debug\Bill.accdb
+G:\ \Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe.config
+G:\ \Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe
+G:\ \Bengali Billing System\Bengacount\bin\Debug\Bengacount.pdb
+G:\ \Bengali Billing System\Bengacount\bin\Debug\Bengacount.xml
+G:\ \Bengali Billing System\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.Shell.resources
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.login_form.resources
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.Main_form.resources
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.Resources.resources
+G:\ \Bengali Billing System\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe.config
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.exe
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.xml
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.pdb
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bill.accdb
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bengacount.pdb
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bengacount.xml
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.login_form.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Resources.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.loading.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.master.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.product_entry.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.selling.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\Bill.mdb
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\bin\Debug\BillDataSource.mdb
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.delete.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.final.resources
+C:\Users\arnab\Downloads\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Form2.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe.config
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.exe
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.xml
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.pdb
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bill.accdb
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bill.mdb
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\BillDataSource.mdb
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.pdb
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.xml
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.final.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.delete.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Form2.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.loading.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.login_form.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.master.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Resources.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.product_entry.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.selling.resources
+C:\Users\DINA\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe.config
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.exe
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.xml
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.pdb
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bill.accdb
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bill.mdb
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\BillDataSource.mdb
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.exe
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.pdb
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\bin\Debug\Bengacount.xml
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.final.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.delete.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Form2.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.loading.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.login_form.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.master.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.Resources.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.product_entry.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.selling.resources
+C:\Users\arnab\Desktop\bbs_new\Bengali Billing System\Bengacount\obj\Debug\Bengacount.vbproj.GenerateResource.Cache
