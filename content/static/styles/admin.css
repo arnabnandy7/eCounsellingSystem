@@ -1,0 +1,47 @@
+#homepage{
+	display:block;
+	width:100%;
+	line-height:1.6em;
+	}
+
+/* ----------------------------------------------Generalise-------------------------------------*/
+
+#hpage_quicklinks ul, #hpage_gallery ul, #hpage_socialize ul, #hpage_latestnews ul, #hpage_specials ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+	}
+
+/* ----------------------------------------------Left Column-------------------------------------*/
+
+#homepage .fl_left{
+	display:block;
+	width:150px;
+	}
+	
+#hpage_quicklinks{
+	margin-bottom:30px;
+}
+
+#hpage_quicklinks li{
+	display:block;
+	float:left;
+	width:180px;
+	margin-bottom:3px;
+	padding:0 0 0 0;
+	
+	}
+
+#hpage_quicklinks li a{
+	display:block;
+	padding-left:10px;
+	background:url("images/arrow.gif") left center no-repeat;
+	}
+
+#hpage_quicklinks li a:hover{
+	color:#591F58;
+	background-color:#E9EBED;
+	}
+	
+	

@@ -1,0 +1,14 @@
+//$chk_flag_query = "select `chk_flg` from `candidate_reg_log_check` where `email`='$email'";
+	
+		//if($chk_flag_query_run=mysql_query($chk_flag_query)){
+			/*if(mysql_num_rows($chk_flag_query_run) == 1) {
+					$flg = mysql_result($chk_flag_query_run, 0, 'chk_flg');
+						if($flg==0){
+							echo $flg;
+						}
+			}*/
+			//$em=mysql_result($email_query_run, 0, 'email');
+			//header("Location: candidate registration 2.php");
+		//}
+		
+		//header("Location: candidate registration 2.php");

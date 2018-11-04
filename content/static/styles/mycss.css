@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+.myline
+{
+border-bottom:5px solid #8199A9;
+}
+
+#outerregisteration
+{
+	margin:0 0 15px 0;
+	width:auto;
+	height:auto;
+	
+}
+#registertable
+{
+	border-style:none;
+	border-style:hidden;
+	margin:30px 0 0 0;
+	
+}
+#registertable tr
+{
+	margin-bottom:30px;
+}
+.registerationh2{
+	display:block;
+	width:100%;
+	height:5px;
+	margin:0;
+	padding:15px 0 0 0;
+	font-size:20px;
+	text-transform:none;
+	line-height:normal;
+
+	}
+
+#outerregisteration .dob
+{
+height:25px; 
+width: 150px; 
+border: 1px solid #B9BDC1; 
+color: #797979; 
+-moz-box-shadow: 0 2px 4px #bbb inset; 
+-webkit-box-shadow: 0 2px 4px #BBB inset; 
+box-shadow: 0 2px 4px #BBB inset; 
+-moz-border-radius: 3px; 
+-webkit-border-radius: 3px; 
+border-radius: 3px; 
+ }
+
+#outerregisteration .dob:focus { 
+background-color: #E7E8E7; 
+outline: 0; 
+} 
+
+
+#outerregisteration .textbox{ 
+height:25px; 
+width: 275px; 
+border: 1px solid #B9BDC1; 
+color: #797979; 
+-moz-box-shadow: 0 2px 4px #bbb inset; 
+-webkit-box-shadow: 0 2px 4px #BBB inset; 
+box-shadow: 0 2px 4px #BBB inset; 
+-moz-border-radius: 3px; 
+-webkit-border-radius: 3px; 
+border-radius: 3px; 
+margin:5px 0 5px 0;
+} 
+
+#outerregisteration .textbox:focus { 
+background-color: #E7E8E7; 
+outline: 0; 
+} 
+#hoverdiv
+{
+	display:none;
+	position:absolute;
+	font-size:14px;
+	background:#fff;
+	color:#404040;
+	border:1px solid#999;
+	padding:7px;
+	top:20px;
+	left:20px;
+	
+}
+.error_msg
+{
+	color:#EA0000;
+}
+.error_box{
+	width:540px;
+	clear:both;
+	background:url(../images/cross.png) no-repeat left #fce9e9;
+	border:1px #eac7c7 solid;
+	background-position:15px 10px;
+	padding:20px 20px 15px 60px;
+	margin:0 0 10px 0;
+}
+#log_out
+{
+	margin:0 0 0 10px;
+	text-decoration:none;
+	display:inline;
+}
+
+.tick
+{
+	visibility:hidden;	
+}
+
+.cross
+ {
+	 visibility:hidden;
+ }
+
+.tick1 {
+	visibility:visible;
+}
+.cross1 {
+	visibility:visible;
+}

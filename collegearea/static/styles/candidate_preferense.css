@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------LightBox Styles--------------------------------------------------*/
+body {
+	//background:#2a2a2a;
+	background:;
+	height: auto;
+}
+
+.lightbox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 800px;
+	height: auto;
+	/*margin-top: -200px;
+	margin-left: -300px;*/
+	margin-top: -250px;
+	margin-left: -450px;
+	margin-bottom:100px;
+	padding: 15px;
+	background: linear-gradient(#e2e2e2, #b5b5b5);
+	background: -webkit-linear-gradient(#e2e2e2, #b5b5b5);
+	background: -webkit-linear-gradient(100% 100% 90deg, #e2e2e2, #b5b5b5);
+	background: -o-linear-gradient(#e2e2e2, #b5b5b5);
+	box-shadow: #000 4px, 4px, 0px;
+	-webkit-box-shadow: #000 4px, 4px, 0px;
+	-moz-box-shadow: #000 4px, 4px, 0px;
+	-o-box-shadow: #000 4px, 4px, 0px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	z-index: 1001;
+	display:none;
+}
+
+.lightboxbg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	//width:1700px;
+	height: 180%;
+	background:black;
+	opacity: 0.7;
+	filter:alpha(opacity = 30);
+	z-index: 1000;
+	display:none;
+}
+/*-----------------------------------LightBox Styles Ends Here--------------------------------------------------*/
+/*---------------------------Preference college modal popup---------------------------------------------------*/
+
+#box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 250px;
+	/*margin-top: -200px;
+	margin-left: -300px;*/
+	margin-top: -190px;
+	margin-left: -220px;
+	margin-bottom:100px;
+	padding: 15px;
+	background: linear-gradient(white, white);
+	background: -webkit-linear-gradient(white, white);
+	background: -webkit-linear-gradient(100% 100% 90deg, white, white);
+	background: -o-linear-gradient(white, white);
+	box-shadow: #000 4px, 4px, 0px;
+	-webkit-box-shadow: #000 4px, 4px, 0px;
+	-moz-box-shadow: #000 4px, 4px, 0px;
+	-o-box-shadow: #000 4px, 4px, 0px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	z-index: 1001;
+	display:none;
+}
+#boxbg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background:black;
+	opacity: 0.7;
+	filter:alpha(opacity = 30);
+	z-index: 1000;
+	display:none;
+}
+
+/*---------------------------Preference college modal popup Ends Here---------------------------------------------------*/
+/*-----------------------------------Preferrence College Table Styles--------------------------------------------------*/
+#rounded-corner
+{
+margin:0px;
+width:790px;
+text-align: left;
+border-collapse: collapse;
+height:auto;
+border-left: 1px solid #fff;
+border-right: 1px solid #fff;
+}
+#rounded-corner thead th.rounded-company
+{
+width:26px;
+background: #60c8f2 url('../images/left.jpg') left top no-repeat;
+}
+#rounded-corner thead th.rounded-q4
+{
+background: #60c8f2 url('../images/right.jpg') right top no-repeat;
+}
+#rounded-corner th
+{
+padding: 8px;
+font-weight: normal;
+font-size: 13px;
+color: #039;
+background: #60c8f2;
+width: 600px;
+}
+#rounded-corner td
+{
+border-top: 1px solid #fff;
+border-collapse: collapse;
+color: #669;
+}
+#rounded-corner tfoot td.rounded-foot-left
+{
+
+}
+#rounded-corner tfoot td.rounded-foot-right
+{
+
+}
+#rounded-corner tbody tr:hover td
+{
+background: #d2e7f0;
+}
+
+.highlight {
+	background: #d2e7f0;
+}
+
+/*-----------------------------------Preferrence College Table Styles Ends Here--------------------------------------------------*/
+
+/*---------------------------------------Span Background Styles-----------------------------------------------------------------*/
+#image {
+	background: linear-gradient(#e2e2e2, #b5b5b5);
+	background: -webkit-linear-gradient(#e2e2e2, #b5b5b5);
+	background: -webkit-linear-gradient(100% 100% 90deg, #e2e2e2, #b5b5b5);
+}
+/*---------------------------------------Span Background Styles Ends Here-----------------------------------------------------------------*/
+/*-----------------------------------Preferrence College Select Button Styles--------------------------------------------------*/
+
+.pref_btn{display:block; float:left; margin:10px 5px 10px 5px; line-height:32px; text-decoration:none; color:#FFFFFF; text-shadow:1px 1px #8fa42b; background: black;}
+.pref_btn strong{width:auto;height:31px; padding:0 10px 0 10px;display:block; float:left;background:url(../images/bt_green_center.gif) repeat-x center;}
+.pref_btn span.bt_green_lft{width:10px;height:31px;display:block; float:left;background:url(../images/bt_green_left.gif) no-repeat center right;}
+.pref_btn span.bt_green_r{width:10px;height:31px;display:block; float:left;background:url(../images/bt_green_r.gif) no-repeat center right;}
+.pref_btn:hover { background:#999999; color:#00FF33; }
+
+.bt_green{display:block; float:left; margin:10px 5px 10px 5px; line-height:31px; text-decoration:none; color:#FFFFFF; text-shadow:1px 1px #8fa42b;}
+.bt_green strong{width:auto;height:31px; padding:0 10px 0 10px;display:block; float:left;background:url(../images/bt_green_center.gif) repeat-x center;}
+.bt_green span.bt_green_lft{width:10px;height:31px;display:block; float:left;background:url(../images/bt_green_left.gif) no-repeat center right;}
+.bt_green span.bt_green_r{width:10px;height:31px;display:block; float:left;background:url(../images/bt_green_r.gif) no-repeat center right;}
+/*a:hover.bt_green{ background:#999999;}*/
+
+/*-----------------------------------Preferrence College Select Button Styles Ends Here--------------------------------------------------*/

@@ -1,0 +1,16 @@
+.textbox{ 
+height:25px; 
+width: 275px; 
+border: 1px solid #B9BDC1; 
+color: #797979; 
+-moz-box-shadow: 0 2px 4px #bbb inset; 
+-webkit-box-shadow: 0 2px 4px #BBB inset; 
+box-shadow: 0 2px 4px #BBB inset; 
+-moz-border-radius: 3px; 
+-webkit-border-radius: 3px; 
+border-radius: 3px; 
+} 
+.textbox:focus { 
+background-color: #E7E8E7; 
+outline: 0; 
+} 
