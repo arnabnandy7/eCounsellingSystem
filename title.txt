@@ -1,0 +1,4 @@
+Welcome to my software 
+		-Arnab Nandy
+
+before installing please denote this quote "software's destination must be set to path D:\\VB Pro\\ or it can't be access elibrary the database for user"
