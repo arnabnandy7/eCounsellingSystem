@@ -148,4 +148,7 @@ Respective college/ Institute authority can view their admission and allocated s
 
 Online Counselling System is a fully automated system thought it has administration functionality regarding uploading news, notice, solving any kind of problem system maintenance and coordinate with institute and candidate for better use of this system. 
 
-<!-- GitAds-Verify: 358LVUS36C6XNYQGFGLF6BW3572VM6PC -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=arnabnandy7/ecounsellingsystem@github)](https://gitads.dev/v1/ad-track?source=arnabnandy7/ecounsellingsystem@github)
+
+
