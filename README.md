@@ -126,3 +126,5 @@ For support or inquiries, please contact:
 - **Email**: [arnab_nandy7@yahoo.com](mailto:arnabnandy7)
 - **GitHub**: [arnabnandy7](https://github.com/arnabnandy7)
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=arnabnandy7/ecounsellingsystem@github)](https://gitads.dev/v1/ad-track?source=arnabnandy7/ecounsellingsystem@github)
