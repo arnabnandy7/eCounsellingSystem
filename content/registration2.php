@@ -6,7 +6,7 @@ if(isset($_POST['reg_step2'])){
 	$name=$_POST['name'];
 	$rank=$_POST['rank'];
 	$email = $_POST['email'];
-	$hashpass = md5($_POST['pass']);
+	$hashpass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 	$phone = $_POST['phone'];
 	$address = $_POST['address'];
 	$error_code = 0;

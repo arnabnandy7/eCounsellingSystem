@@ -1,7 +1,7 @@
 <?php
-if(!empty($_GET['clg']))
+if(!empty($_POST['clg']))
 {
-	$r=$_GET['clg'];
+	$r=(int) $_POST['clg'];
 }
 else
 {
@@ -15,5 +15,6 @@ else
 	$rs=mysql_query($sql);
 	//echo $sql." ".$rs;
 	header('Location: index.php');
+	exit;
 
 ?>

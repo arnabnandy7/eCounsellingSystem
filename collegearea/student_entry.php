@@ -25,6 +25,11 @@ else
 	include "connect.inc.php";
 	if(isset($_POST['submit']))
 	{
+		if(!auth_verify_csrf(isset($_POST['csrf_token']) ? $_POST['csrf_token'] : null))
+		{
+			http_response_code(403);
+			exit('Invalid CSRF token.');
+		}
 		$rank=$_POST['srank'];
 		$eno=$_POST['seno'];
 		$code=$_POST['scode'];
@@ -153,7 +158,8 @@ $(document).ready(function(e) {
 		   echo "<h2 align='center' style='color:red' id='error'>Invalid Combination</h2>";
 	   }
 	   ?>
-     	<form action="" method="POST"> 
+	<form action="" method="POST">
+		<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8'); ?>" />
 		<table style='margin:30px 0 0 0 ;'>
 			<tr>
 				<td>Enter Candidate Rank</td>

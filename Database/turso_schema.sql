@@ -8,6 +8,15 @@ CREATE TABLE IF NOT EXISTS app_sessions (
 
 CREATE INDEX IF NOT EXISTS app_sessions_expiry ON app_sessions(expires_at);
 
+CREATE TABLE IF NOT EXISTS auth_attempts (
+    identity_hash TEXT PRIMARY KEY,
+    failures INTEGER NOT NULL DEFAULT 0,
+    last_attempt INTEGER NOT NULL,
+    blocked_until INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE INDEX IF NOT EXISTS auth_attempts_blocked ON auth_attempts(blocked_until);
+
 CREATE TABLE IF NOT EXISTS admin_login (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL UNIQUE,

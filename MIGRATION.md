@@ -43,4 +43,6 @@ docker run --rm --env-file .env.local -v "$PWD:/app:ro" -w /app \
   php:8.3-cli php -d error_reporting=E_ALL tests/php8_smoke.php
 docker run --rm --env-file .env.local -v "$PWD:/app:ro" -w /app \
   php:8.3-cli php -d error_reporting=E_ALL tests/phase2_database_flows.php
+docker run --rm --env-file .env.local -v "$PWD:/app:ro" -w /app \
+  php:8.3-cli php -d error_reporting=E_ALL tests/phase3_security.php
 ```

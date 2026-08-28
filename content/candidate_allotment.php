@@ -234,9 +234,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			if($status=='')
 			{
 				echo "<p align='center'>
-	<a href='book.php?rank=$rank'><button id='book' style='background-color:#039; color:#FFF; font-size:18px'>Book Allotment</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<form action='book.php' method='post' style='display:inline'><input type='hidden' name='csrf_token' value='".htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8')."'><button id='book' style='background-color:#039; color:#FFF; font-size:18px'>Book Allotment</button></form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	
-	<a href='upgrade.php?rank=$rank'><button id='upgrd' style='background-color:#039; color:#FFF; font-size:18px'>Upgrade</button></a>
+	<form action='upgrade.php' method='post' style='display:inline'><input type='hidden' name='csrf_token' value='".htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8')."'><button id='upgrd' style='background-color:#039; color:#FFF; font-size:18px'>Upgrade</button></form>
 	
 	</p>	";
 			}

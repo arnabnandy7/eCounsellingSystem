@@ -9,6 +9,10 @@
 ?>
 <?php
 require "connect.inc.php";
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !auth_verify_csrf(isset($_POST['csrf_token']) ? $_POST['csrf_token'] : null)) {
+	http_response_code(403);
+	exit('Invalid CSRF token.');
+}
 $safe_email=str_replace("'", "''", $email);
 $candidate_result=mysql_query("select rank from candidate_details where email='$safe_email'");
 $candidate=mysql_fetch_array($candidate_result);

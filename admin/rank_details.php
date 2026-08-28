@@ -80,9 +80,7 @@ $result1 = mysql_query($query1);
 		echo "<td>".$row['dob']."</td>";
 		echo "<td><a href='#' onclick='updaterank($row[0])'>
 		<img src='images/edit.png'>
-		</a>&nbsp;&nbsp;&nbsp;<a href='deleterank.php?rank=$row[0]'>
-		<img src='images/logout.png'>
-		</a></td>";		
+		</a>&nbsp;&nbsp;&nbsp;<form method='post' action='deleterank.php' style='display:inline'><input type='hidden' name='rank' value='$row[0]'><button type='submit' style='border:0;background:none;padding:0'><img src='images/logout.png'></button></form></td>";		
             
         echo "</tr>";
 		}

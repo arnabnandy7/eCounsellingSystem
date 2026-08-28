@@ -40,9 +40,7 @@ $result1 = mysql_query($query1);
 		echo "<td>".$row['2']."</td>";
 		echo "<td><a href='#' onclick='editnewsdetails($row[0])'>
 		<img src='images/edit.png'>
-		</a>&nbsp;&nbsp;&nbsp;<a href='deletenews.php?id=$row[0]'>
-		<img src='images/logout.png'>
-		</a></td>";
+		</a>&nbsp;&nbsp;&nbsp;<form method='post' action='deletenews.php' style='display:inline'><input type='hidden' name='id' value='$row[0]'><button type='submit' style='border:0;background:none;padding:0'><img src='images/logout.png'></button></form></td>";
         echo "</tr>";
 		}
   ?>

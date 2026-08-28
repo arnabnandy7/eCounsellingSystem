@@ -1,5 +1,6 @@
 <?php require 'session.php';
 	 include "connect.inc.php";
+	 require_once dirname(__DIR__) . '/includes/auth.php';
 
 						if(loggedin()) {
 							$name =  $_SESSION['name'];
@@ -20,17 +21,15 @@
 	include "connect.inc.php";
 	
 	if(isset($_POST['change_pass'])){
-		$opass=md5($_POST['old_pass']);
-		$npass=md5($_POST['new_pass']);
+		$old_password=$_POST['old_pass'];
+		$npass=password_hash($_POST['new_pass'], PASSWORD_DEFAULT);
 		
-		$query="select * from `candidate_details` where `rank`='$rank' and `password`='$opass'";
+		$query="select * from `candidate_details` where `rank`='$rank'";
 		$query_run=mysql_query($query);
-		$row_count=mysql_num_rows($query_run);
-		if($row_count==1){
-			$update_pass="update `candidate_details` set `password`='$npass' where `rank`='$rank'";
-			mysql_query($update_pass);
-			$update_login="update `candidate_reg_log_check` set `password`='$npass' where `email`='$mail'";
-			mysql_query($update_login);
+		$password_row=mysql_fetch_array($query_run);
+		if($password_row && auth_password_matches($old_password, $password_row['password'])){
+			turso_query('update candidate_details set password=? where rank=?', array($npass, (int) $rank));
+			turso_query('update candidate_reg_log_check set password=? where email=?', array($npass, $mail));
 		}else{
 			echo "<script>alert('Incorrect pass')</script>";
 		}

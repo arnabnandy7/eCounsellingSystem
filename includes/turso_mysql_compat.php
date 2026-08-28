@@ -53,13 +53,28 @@ function legacy_turso_sql($sql)
     return preg_replace('/\bLIMIT\s+(\d+)\s*,\s*(\d+)\b/i', 'LIMIT $2 OFFSET $1', $sql);
 }
 
-function legacy_turso_request($sql)
+function legacy_turso_argument($value)
+{
+    if ($value === null) {
+        return array('type' => 'null');
+    }
+    if (is_int($value) || is_bool($value)) {
+        return array('type' => 'integer', 'value' => (string) (int) $value);
+    }
+    if (is_float($value)) {
+        return array('type' => 'float', 'value' => $value);
+    }
+    return array('type' => 'text', 'value' => (string) $value);
+}
+
+function legacy_turso_request($sql, array $parameters = array())
 {
     list($baseUrl, $token) = legacy_turso_credentials();
+    $arguments = array_map('legacy_turso_argument', array_values($parameters));
     $payload = json_encode(array(
         'requests' => array(array(
             'type' => 'execute',
-            'stmt' => array('sql' => legacy_turso_sql($sql), 'want_rows' => true),
+            'stmt' => array('sql' => legacy_turso_sql($sql), 'args' => $arguments, 'want_rows' => true),
         )),
     ));
 
@@ -110,6 +125,35 @@ function legacy_turso_request($sql)
     return $response['response']['result'];
 }
 
+function legacy_turso_result(array $result)
+{
+    $columns = array();
+    foreach (isset($result['cols']) ? $result['cols'] : array() as $column) {
+        $columns[] = $column['name'];
+    }
+    $rows = array();
+    foreach (isset($result['rows']) ? $result['rows'] : array() as $row) {
+        $values = array();
+        foreach ($row as $value) {
+            $values[] = legacy_turso_value($value);
+        }
+        $rows[] = $values;
+    }
+    return new LegacyMysqlResult($rows, $columns);
+}
+
+function turso_query($sql, array $parameters = array())
+{
+    try {
+        $result = legacy_turso_request($sql, $parameters);
+        $GLOBALS['legacy_mysql_error'] = '';
+        return legacy_turso_result($result);
+    } catch (Throwable $error) {
+        $GLOBALS['legacy_mysql_error'] = $error->getMessage();
+        return false;
+    }
+}
+
 function mysql_connect($host = null, $username = null, $password = null)
 {
     try {
@@ -128,28 +172,7 @@ function mysql_select_db($databaseName, $connection = null)
 
 function mysql_query($sql, $connection = null)
 {
-    try {
-        $result = legacy_turso_request($sql);
-        $columns = array();
-        foreach (isset($result['cols']) ? $result['cols'] : array() as $column) {
-            $columns[] = $column['name'];
-        }
-
-        $rows = array();
-        foreach (isset($result['rows']) ? $result['rows'] : array() as $row) {
-            $values = array();
-            foreach ($row as $value) {
-                $values[] = legacy_turso_value($value);
-            }
-            $rows[] = $values;
-        }
-
-        $GLOBALS['legacy_mysql_error'] = '';
-        return new LegacyMysqlResult($rows, $columns);
-    } catch (Throwable $error) {
-        $GLOBALS['legacy_mysql_error'] = $error->getMessage();
-        return false;
-    }
+    return turso_query($sql);
 }
 
 function mysql_num_rows($result)

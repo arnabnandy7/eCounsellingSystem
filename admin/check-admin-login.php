@@ -1,30 +1,20 @@
 <?php
-require "connect.inc.php";
-$id=$_POST['email'];
-$pass=$_POST['pass'];
-$passwd=md5($pass);
+require 'connect.inc.php';
+require_once dirname(__DIR__) . '/includes/auth.php';
 
-$sql_admin_login = "select * from admin_login where email='$id' and password='$passwd'";
-$result_admin_login = mysql_query($sql_admin_login);
-$count_admin_login = mysql_num_rows($result_admin_login);
-$row=mysql_fetch_array($result_admin_login);
-if($count_admin_login == 1 )
-{
-	$date = date_default_timezone_set('Asia/Kolkata');
-$today = date("F j, Y, g:i a T");
-	session_start();
-	$_SESSION['admin_id']=$id;
-	$_SESSION['userlogged']=1;
-	$_SESSION['name']=$row['name'];
-	$_SESSION['currentloggedtime']=$today;
-	$_SESSION['lastloggedtime']=$row['last_login'];
-		
-	$sql1="update admin_login set last_login='$today' where email='$id'";
-	mysql_query($sql1);
-	header("location:index.php");
+$email = isset($_POST['email']) ? trim($_POST['email']) : '';
+$password = isset($_POST['pass']) ? $_POST['pass'] : '';
+$user = auth_authenticate('admin', $email, $password);
+
+if (!$user) {
+    header('Location: login.php?error=invalidcredential');
+    exit;
 }
-else
-{
-	header("Location:login.php?error=invalidcredential");	
-}
-?>
+
+auth_begin_session('admin', $user);
+date_default_timezone_set('Asia/Kolkata');
+$today = date('F j, Y, g:i a T');
+$_SESSION['currentloggedtime'] = $today;
+turso_query('UPDATE admin_login SET last_login=? WHERE email=?', array($today, $email));
+header('Location: index.php');
+exit;

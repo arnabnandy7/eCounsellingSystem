@@ -9,6 +9,10 @@ if (empty($_SESSION['userlogged']) || empty($_SESSION['admin_id'])) {
     http_response_code(403);
     exit('Administrator authentication required.');
 }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !auth_verify_csrf(isset($_POST['csrf_token']) ? $_POST['csrf_token'] : null)) {
+    http_response_code(403);
+    exit('Invalid CSRF token.');
+}
 
 if (isset($_POST['button_start_counselling'])) {
     counselling_run_first_round();
