@@ -29,6 +29,8 @@
 		if($row_count==1){
 			$update_pass="update `candidate_details` set `password`='$npass' where `rank`='$rank'";
 			mysql_query($update_pass);
+			$update_login="update `candidate_reg_log_check` set `password`='$npass' where `email`='$mail'";
+			mysql_query($update_login);
 		}else{
 			echo "<script>alert('Incorrect pass')</script>";
 		}

@@ -1,12 +1,7 @@
 <?php
-$conn_error='Could not connect.';
- 
-$mysql_host = "mysql6.000webhost.com";
-$mysql_db = "a1393332_ecounse";
-$mysql_user = "a1393332_ecounse";
-$mysql_password = "sdetbgi2013";
+require_once dirname(__DIR__, 2) . '/includes/turso_mysql_compat.php';
 
-if(!@mysql_connect($mysql_host,$mysql_user,$mysql_password) || !@mysql_select_db($mysql_db)){
-	die($conn_error);
+if (!mysql_connect() || !mysql_select_db('ecounselling')) {
+	die('Could not connect.');
 }
 ?>

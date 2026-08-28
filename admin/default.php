@@ -80,7 +80,7 @@ if($_GET['dir']) {
 	}
 	
 	$dirok = true;
-	$dirnames = split('/', $_GET['dir']);
+	$dirnames = explode('/', $_GET['dir']);
 	for($di=0; $di<sizeof($dirnames); $di++) {
 		
 		if($di<(sizeof($dirnames)-2)) {

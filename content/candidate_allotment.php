@@ -161,7 +161,6 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
     
     <div id='content'>
     <?php
-	require "phpToPDF.php" ;
     $cont1="
     <div id='allot' >
      <h2 align='center' style='color:#27408B;'>COUNSELLING ALLOTMENT STATUS</h2>
@@ -210,57 +209,6 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
     ";
 	echo $cont1;
 	echo "<br><br><br>";
-	$var=$name."_".$rank.".pdf";
-	//@phptopdf_html($cont1,'/seat_allocation_pdf/',$var1);
-	$path="seat_allocation_pdf/$var";
-	
-	$pref=array("1st Preference","2nd Preference","3rd Preference","Allocated College","Secure Sequence");
-	
-	$pref_value=array($pref_1_name,$pref_2_name,$pref_3_name,$clg_name,$seq_id);
-	
-	require "create_result.php";
-	$pdf = new PDF_result();
-$pdf->AddPage();
-$pdf->SetFont('Arial', 'B', 12);
-$pdf->SetY(100);
-
-$pdf->Cell(105, 13, "Candidate Details");
-$pdf->SetFont('Arial', '');
-
-$pdf->Cell(250, 13, $name);
-
-$pdf->SetFont('Arial', 'B');
-$pdf->Cell(50, 13, "Date:");
-$pdf->SetFont('Arial', '');
-$pdf->Cell(100, 13, date('F j, Y, g:i a'), 0, 1);
-
-$cand_rank="Rank: ".$rank;
-$cand_enroll="Enrollment No: ".$enrolment_no;
-
-$pdf->SetFont('Arial', 'I');
-$pdf->SetX(140);
-$pdf->Cell(200, 15, $email, 0, 2);
-$pdf->Cell(200, 15, $cand_rank . ' , ' . $cand_enroll , 0, 2);
-//$pdf->Cell(200, 15, $_POST['Country'], 0, 2);
-
-$pdf->Ln(100);
-
-$pdf->Generate_Table($pref, $pref_value);
-
-$pdf->Ln(65);
-
-$message = "Congratulation , you have successfully allocated seat in the above mentioned college/university .
-For More Information Contact us at : ";
-
-$pdf->MultiCell(0, 25, $message);
-//$pdf->MultiCell(0, 15, $message);
-
-$pdf->SetFont('Arial', 'U', 12);
-$pdf->SetTextColor(1, 162, 232);
-
-$pdf->Write(13, "admin@ecounselling.tk", "admin@ecounselling.tk");
-
-$pdf->Output($path, 'F');
 
 	?>
     <div id="mydiv">
@@ -279,7 +227,7 @@ $pdf->Output($path, 'F');
 		else if($pref_clg==1)
 		{
 			echo "<p align='center'>
-	<a href='$path' target='_blank' ><button style='background-color:#039; color:#FFF; font-size:18px'>Download Allotment Result</button></a></p>	";
+	<a href='download_allotment.php'><button type='button' style='background-color:#039; color:#FFF; font-size:18px'>Download Allotment Result</button></a></p>	";
 		}
 		else
 		{
@@ -295,7 +243,7 @@ $pdf->Output($path, 'F');
 			if($status=='N')
 			{
 				echo "<p align='center'>
-	<a href='$path' target='_blank' ><button style='background-color:#039; color:#FFF; font-size:18px'>Download Allotment Result</button></a></p>	";
+	<a href='download_allotment.php'><button style='background-color:#039; color:#FFF; font-size:18px'>Download Allotment Result</button></a></p>	";
 			}
 			if($status=='Y')
 			{

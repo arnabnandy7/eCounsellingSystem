@@ -1,0 +1,7 @@
+.env
+.env.local
+.git
+content/seat_allocation_pdf
+**/Thumbs.db
+**/desktop.ini
+
