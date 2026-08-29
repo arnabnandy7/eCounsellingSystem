@@ -217,6 +217,10 @@ function openInfoPage(url) {
       <div class="fl_right">
 	  
         <h2 class="title">ABOUT E-COUNSELLING SYSTEM </h2>
+
+          <p style="padding:10px;border:1px solid #D99B00;background:#FFF8DC;color:#7A4E00;font-weight:bold;" role="note">
+            Disclaimer: This is a dummy academic major project hosted publicly for demonstration purposes only. It is not an official counselling or admission portal, does not perform any actual JECA examination or counselling functions, and is not affiliated with or endorsed by JECA, WBUT, MAKAUT, or any government or educational authority. Do not submit real personal, academic, or payment information.
+          </p>
         
           <p align="justify">The West Bengal Joint Entrance Examinations Board was formed in the year 1962 for the purpose of holding Common Entrance Examinations for the Undergraduate Level Engineering Courses in the State of West Bengal . This year, the Board has stepped into its Golden Jubilee year. Since last year, the endeavour of the Board has been to enhance the standard of transparency in conducting Common Entrance Examinations for various professional Undergraduate and Postgraduate level courses in the State through effective state-of-the-art technology. Admission through e-Counselling was successfully implemented to admit candidates in the undergraduate level courses in the Engineering & Technological Institutes of the State for the academic year 2012 - 2013.
 For the 2013 - 2014 academic session, the Board will conduct the Common Entrance Examination along with counselling for admission to Undergraduate Courses in Engineering & Technology, Pharmacy and Architecture in Universities, Govt. Colleges and Self-Financed Institutes in the State.
