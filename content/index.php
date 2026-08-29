@@ -226,17 +226,10 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
       </div>
     </div>
     <!-- ####################################################################################################### -->
-    <?php 
-	require "connect.inc.php";
-	$sql_d="select * from seat_allotments";
-	$res_d=mysql_query($sql_d);
-	$coun_d=mysql_num_rows($res_d);
-	
-	?>
     <div id ="extream_right">
      <h2 class="title">Login Section</h2>
     <div id="logins">
-    <a href="candidate registration 1.php" class="loginbutton" style="color: #ffffff" onclick=<?php if($coun_d != 0 ){echo "'return false'";}else{}?> >New User Register Here</a>
+    <a href="candidate registration 1.php" class="loginbutton" style="color: #ffffff">New User Register Here</a>
      <div id="modalbutton">
     <a href="#loginmodal" class="loginbutton" id="modaltrigger" style="color: #ffffff">Sign In</a>
     
