@@ -6,7 +6,10 @@
     }
   },
   "routes": [
-    { "handle": "filesystem" },
+    {
+      "src": "/(.*\\.(?:css|js|map|html|png|jpg|jpeg|gif|bmp|svg|ico|webp|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
     { "src": "/(.*)", "dest": "/api/index.php?path=$1" }
   ]
 }

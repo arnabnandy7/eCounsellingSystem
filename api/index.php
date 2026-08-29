@@ -39,7 +39,10 @@ if (substr($path, -1) === '/') {
 
 $target = realpath($root . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $path));
 
-if ($target === false || strpos($target, $root . DIRECTORY_SEPARATOR) !== 0 || !is_file($target)) {
+if ($target === false
+    || strpos($target, $root . DIRECTORY_SEPARATOR) !== 0
+    || !is_file($target)
+    || strtolower(pathinfo($target, PATHINFO_EXTENSION)) !== 'php') {
     http_response_code(404);
     echo 'Not Found';
     exit;
