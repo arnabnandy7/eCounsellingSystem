@@ -1,6 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['userlogged']!="1")
+if (session_status() !== PHP_SESSION_ACTIVE) {
+	session_start();
+}
+if (empty($_SESSION['userlogged']))
 {
 	header("location:login.php");
 }
