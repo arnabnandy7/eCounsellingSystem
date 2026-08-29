@@ -27,6 +27,9 @@ function counselling_run_first_round($minimumRank = 1, $maximumRank = 100)
                 break;
             }
         }
+        if ($allocatedCollege === 0) {
+            continue;
+        }
         $sequence = (string) mt_rand();
         $upgradeStatus = $allocatedPreference === 1 ? 'N' : '';
         mysql_query("INSERT INTO seat_allotments VALUES ($rank,$allocatedCollege,$allocatedPreference,'$sequence','$upgradeStatus','','Y')");
@@ -71,4 +74,3 @@ function counselling_run_second_round($minimumRank = 1, $maximumRank = 100)
     }
     return $processed;
 }
-

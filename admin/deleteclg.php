@@ -1,4 +1,10 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+	http_response_code(405);
+	header('Allow: POST');
+	exit('Method Not Allowed');
+}
+
 if(!empty($_POST['clg']))
 {
 	$r=(int) $_POST['clg'];

@@ -14,10 +14,21 @@ Never commit the populated environment file.
 
 ## Database
 
-Apply `Database/turso_schema.sql` to an empty Turso database before running the
-application. The original SQL dumps are retained only as migration source data.
-After importing those dumps, apply `Database/turso_seed_fixes.sql`. It corrects
-the one legacy college-login email that does not match its college record.
+Apply `Database/turso_schema.sql` and then `Database/turso_seed.sql` to an empty
+Turso database before running the application. The seed file contains only
+SQLite/libSQL-compatible inserts and includes the corrected college-login email.
+Duplicate primary keys in the historical dumps are deterministically ignored.
+The original MySQL dumps are retained as migration source data but must not be
+applied directly to Turso.
+
+Regenerate the importable seed after changing a legacy dump with:
+
+```sh
+php scripts/build_turso_seed.php
+```
+
+The entire `Database` directory is excluded from Vercel deployments so neither
+the migration data nor its historical account records can be served publicly.
 
 The compatibility layer in `includes/turso_mysql_compat.php` lets the existing
 pages run while their queries are incrementally converted to parameterized

@@ -46,18 +46,19 @@ $rank = 900001;
 $firstCollege = 900001;
 $secondCollege = 900002;
 $thirdCollege = 900003;
+$unallocatedRank = 900004;
 $email = 'phase2-flow@example.invalid';
 
 // Always remove prior interrupted smoke-test records before starting.
-$cleanup = function () use ($rank, $firstCollege, $secondCollege, $thirdCollege, $email) {
+$cleanup = function () use ($rank, $unallocatedRank, $firstCollege, $secondCollege, $thirdCollege, $email) {
     mysql_query("DELETE FROM counselling_date WHERE event='Phase Two Auto Increment Test'");
-    mysql_query("DELETE FROM seat_allotments WHERE rank=$rank");
-    mysql_query("DELETE FROM candidate_preferences WHERE rank=$rank");
+    mysql_query("DELETE FROM seat_allotments WHERE rank IN ($rank,$unallocatedRank)");
+    mysql_query("DELETE FROM candidate_preferences WHERE rank IN ($rank,$unallocatedRank)");
     mysql_query("DELETE FROM candidate_reg_log_check WHERE email='$email'");
     mysql_query("DELETE FROM candidate_details WHERE rank=$rank");
     mysql_query("DELETE FROM college_login WHERE college_id IN ($firstCollege,$secondCollege,$thirdCollege)");
     mysql_query("DELETE FROM college_details WHERE college_cuid IN ($firstCollege,$secondCollege,$thirdCollege)");
-    mysql_query("DELETE FROM rank_details WHERE rank=$rank");
+    mysql_query("DELETE FROM rank_details WHERE rank IN ($rank,$unallocatedRank)");
 };
 
 $cleanup();
@@ -76,6 +77,17 @@ try {
     queryOrFail("INSERT INTO college_details VALUES ($secondCollege, 'Phase Two Second College', 'test', 'Test University', 'Test', 1, 1, 1, '', '', '', 'phase2-second@example.invalid')");
     queryOrFail("INSERT INTO college_details VALUES ($thirdCollege, 'Phase Two Third College', 'test', 'Test University', 'Test', 1, 1, 1, '', '', '', 'phase2-third@example.invalid')");
     queryOrFail("INSERT INTO candidate_preferences VALUES ($rank, $firstCollege, $secondCollege, $thirdCollege)");
+
+    // A candidate with no available preference must not receive a fake zero allotment.
+    queryOrFail("INSERT INTO rank_details VALUES ($unallocatedRank, 'PHASE2-NO-SEAT', 'Phase Two Unallocated', '2000-01-02')");
+    queryOrFail("INSERT INTO candidate_preferences VALUES ($unallocatedRank, $firstCollege, $firstCollege, $firstCollege)");
+    if (counselling_run_first_round($unallocatedRank, $unallocatedRank) !== 0) {
+        throw new RuntimeException('Round one reported an allocation when no seat was available.');
+    }
+    $unallocated = queryOrFail("SELECT rank FROM seat_allotments WHERE rank=$unallocatedRank");
+    if (mysql_num_rows($unallocated) !== 0) {
+        throw new RuntimeException('Round one created a zero-college allotment.');
+    }
 
     $registered = expectOneRow("SELECT id FROM candidate_details WHERE rank=$rank AND email='$email'", 'Registration flow failed.');
     if ((int) $registered['id'] <= 0) {
