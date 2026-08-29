@@ -6,7 +6,7 @@ if(isset($_POST['reg_step2'])){
 	$name=$_POST['name'];
 	$rank=$_POST['rank'];
 	$email = $_POST['email'];
-	$hashpass = md5($_POST['pass']);
+	$hashpass = password_hash($_POST['pass'], PASSWORD_DEFAULT);
 	$phone = $_POST['phone'];
 	$address = $_POST['address'];
 	$error_code = 0;
@@ -28,22 +28,18 @@ if(isset($_POST['reg_step2'])){
 					if(checkdnsrr($domain,"NS"))
 					{
 						$candidateid=rand(11140101,999999999);
-						$query = "insert into `candidate_details` values('','$candidateid','$name','$rank','$email','$hashpass','$std_phone','$address','')";
+						$query = "insert into `candidate_details` values(NULL,'$candidateid','$name','$rank','$email','$hashpass','$std_phone','$address','')";
 						if($query_run = mysql_query($query))
 						{
 							$length = 5;
 							$randomstring = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
-							$flag=0;
+							$flag=1;
 					
 							$activation_query = "insert into `candidate_reg_log_check` values('".$email."','".$hashpass."','".$randomstring."', '".$flag."')";	
 							if($activation_query_run= mysql_query($activation_query))
 							{
-										$to = $email;
-                                        include "regact_mail.php";
-										send_activation($email,$randomstring);
-										session_start();
-										$_SESSION['candemail']=$to;
-					                    header("Location: candidate registration 3.php");
+										header("Location: index.php?registration=complete");
+										exit;
 							}
 						}
 					}

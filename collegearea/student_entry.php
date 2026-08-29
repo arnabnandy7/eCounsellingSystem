@@ -12,19 +12,17 @@
 						}
 ?>
 <?php
-if(!empty($_GET))
-{
-	$error=$_GET['error'];
-}
-else
-{
-	$error="";
-}
+$error = isset($_GET['error']) ? $_GET['error'] : '';
 ?>
 <?php 
 	include "connect.inc.php";
 	if(isset($_POST['submit']))
 	{
+		if(!auth_verify_csrf(isset($_POST['csrf_token']) ? $_POST['csrf_token'] : null))
+		{
+			http_response_code(403);
+			exit('Invalid CSRF token.');
+		}
 		$rank=$_POST['srank'];
 		$eno=$_POST['seno'];
 		$code=$_POST['scode'];
@@ -153,7 +151,8 @@ $(document).ready(function(e) {
 		   echo "<h2 align='center' style='color:red' id='error'>Invalid Combination</h2>";
 	   }
 	   ?>
-     	<form action="" method="POST"> 
+	<form action="" method="POST">
+		<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8'); ?>" />
 		<table style='margin:30px 0 0 0 ;'>
 			<tr>
 				<td>Enter Candidate Rank</td>
@@ -262,7 +261,7 @@ $(document).ready(function(e) {
     <div class="footbox">
       <h2>Administration</h2>
       <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -270,10 +269,10 @@ $(document).ready(function(e) {
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
     <!-- ####################################################################################################### -->

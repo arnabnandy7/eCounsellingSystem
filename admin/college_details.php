@@ -93,9 +93,7 @@ $result1 = mysql_query($query1);
 		echo "<td><a href='#' onclick='updateclg($row[0])'>
 		<img src='images/edit.png'></a></td>";
 		
-		echo "<td><a href='deleteclg.php?clg=$row[college_cuid]'>
-		<img src='images/logout.png'>
-		</a></td>";		
+		echo "<td><form method='post' action='deleteclg.php' style='display:inline'><input type='hidden' name='clg' value='$row[college_cuid]'><button type='submit' style='border:0;background:none;padding:0'><img src='images/logout.png'></button></form></td>";		
         echo "</tr>";
 		}
   ?>

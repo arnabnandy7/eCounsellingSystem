@@ -30,7 +30,7 @@ while($row_date=mysql_fetch_array($result_fetch_date))
 <div align="center">
 Generated @ e-counselling System
 <br>
-© <a href="http://www.ecounselling.tk/">www.ecounselling.tk</a>
+© <a href="/">www.ecounselling.tk</a>
 <br><br>
 </div>
 </div>

@@ -1,6 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['userlogged']!="1")
+if (session_status() !== PHP_SESSION_ACTIVE) {
+	session_start();
+}
+if (empty($_SESSION['userlogged']))
 {
 	header("location: login.php");
 }
@@ -20,7 +22,6 @@ if(isset($_POST['changepass']))
 		$sql1 = "update admin_login set password='$password' where email='$id'";
 		if(mysql_query($sql1))
 		{
-			session_start();
 			session_destroy();
 			header("location: login.php?sucess=passwordchanged");
 		}

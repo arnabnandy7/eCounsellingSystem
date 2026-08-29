@@ -30,9 +30,74 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
 /* ----------------------------------------------Featured Slider-------------------------------------*/
 
 #featured_slide{
+	position:relative;
 	height:360px;
 	padding-top:30px;
+	overflow:hidden;
 	}
+
+#featured_slide ol{
+	position:relative;
+	height:360px;
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+
+#featured_slide ol li{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:360px;
+	list-style:none;
+	}
+
+#featured_slide ol li:first-child,
+#featured_slide ol li.active{
+	display:block;
+	}
+
+#featured_slide.carousel_ready ol li{display:none;}
+#featured_slide.carousel_ready ol li.active{display:block;}
+
+#featured_slide ol li h2{
+	position:absolute;
+	left:0;
+	bottom:0;
+	z-index:2;
+	margin:0;
+	padding:12px 18px;
+	color:#F8F9F3;
+	background:#002E5D;
+	font-size:18px;
+	}
+
+#featured_slide ol li img{
+	display:block;
+	width:100%;
+	height:360px;
+	object-fit:cover;
+	}
+
+#featured_slide .carousel_control{
+	position:absolute;
+	top:180px;
+	z-index:3;
+	width:42px;
+	height:54px;
+	border:0;
+	color:#FFFFFF;
+	background:rgba(0, 46, 93, .75);
+	font-size:28px;
+	cursor:pointer;
+	}
+
+#featured_slide .carousel_previous{left:0;}
+#featured_slide .carousel_next{right:0;}
+#featured_slide .carousel_control:hover,
+#featured_slide .carousel_control:focus{background:#002E5D;}
 
 /* ----------------------------------------------Quick Links-------------------------------------*/
 

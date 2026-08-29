@@ -39,9 +39,7 @@ $result1 = mysql_query($query1);
         echo "<td>".$row['title']."</td>";
 		echo "<td>".$row['subject']."</td>";
 		echo "<td>".$row['name']."</td>";
-        echo "<td align='left'><a href='delnotice.php?id=$row[id]'>
-		<img src='images/logout.png'>
-		</a></td>";		    
+        echo "<td align='left'><form method='post' action='delnotice.php' style='display:inline'><input type='hidden' name='id' value='$row[id]'><button type='submit' style='border:0;background:none;padding:0'><img src='images/logout.png'></button></form></td>";		    
         echo "</tr>";
 		}
   ?>

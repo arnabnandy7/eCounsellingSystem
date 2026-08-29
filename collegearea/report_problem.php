@@ -124,43 +124,10 @@ border-bottom:1px red;
     
       </div>
       <div id='data'>
-	  
-	   <form action="#" method="POST" id="f1" name="f1">
-      <table style='margin:30px 0 0 0;'>
-      	<tr>
-        	<td style='width:200px;'><h3>TO</h3></td>
-            <td> <input class="textbox" type="text" name="admin_mail" id="" value="admin@ecounselling.tk" readonly/> </td>
-        </tr>
-        <tr>
-        	<td ><h3>Subject</h3></td>
-            <td><textarea name="sub" style="width:270px; height:100px" required="required"></textarea></td>
-        </tr>
-        <tr>
-        	<td></td>
-            <td> <input type="submit" name="send_mail" value="Send" /></td>
-        </tr>
-        	
-      </table>
-	  </form>
-      <?php									include "connect.inc.php";
-										if(isset($_POST['send_mail']))
-										{
-											$to = "admin@ecounselling.tk";
-                                        	$subject = "Error report";
-                                        	$message = $_POST['sub'];
-                                        	$from = $mail;
-                                        	$headers = "From:" . $from;
-                                        	if(mail($to,$subject,$message,$headers))
-											{
-												echo "<script>alert('message sent')</script>";
-											}
-											else
-											{
-												echo "Message sending failed";
-											}
-										}
-										
-?>
+	  <div style="margin:30px 0;padding:20px;border:1px solid #D7DBE0;background:#F7F9FC;color:#27408B;">
+	    <h3>Problem reporting is currently unavailable</h3>
+	    <p>The email facility is not enabled for this deployment.</p>
+	  </div>
 	  </br></br>
 	  <div class="myline">
        </div>
@@ -255,7 +222,7 @@ border-bottom:1px red;
     <div class="footbox">
       <h2>Administration</h2>
       <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -263,10 +230,10 @@ border-bottom:1px red;
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
   <!-- ####################################################################################################### -->

@@ -1,13 +1,13 @@
 <?php
-//require 'connect.inc.php';
-session_start();
+require_once 'connect.inc.php';
+require_once dirname(__DIR__) . '/includes/auth.php';
+
+if (session_status() !== PHP_SESSION_ACTIVE) {
+	session_start();
+}
 
 function loggedin() {
-	if(isset($_SESSION['name']) && !empty($_SESSION['name'])) {
-		return true;
-	} else {
-		return false;
-	}
+	return auth_has_role('college');
 }
 
 ?>

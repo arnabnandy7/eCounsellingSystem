@@ -1,4 +1,8 @@
 <?php
+$id = '';
+$email = '';
+$suc = '';
+
 if(!empty($_GET))
 {
 	if(!empty($_GET["key"]))
@@ -18,12 +22,10 @@ if(!empty($_GET))
 		{
 			//header("location:index.php");	
 		}
-		$suc='';
 	}
-	elseif($_GET["err"])
+	elseif(!empty($_GET["err"]))
 	{
 		$suc=$_GET["err"];
-		$id="";
 	}
 	else
 	{
@@ -32,6 +34,7 @@ if(!empty($_GET))
 else
 {
 	header("location:index.php");
+	exit;
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -316,7 +319,7 @@ else
     <div class="footbox">
       <h2>Administration</h2>
       <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -324,10 +327,10 @@ else
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
     <!-- ####################################################################################################### -->

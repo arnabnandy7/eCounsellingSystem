@@ -1,5 +1,5 @@
 <?php 
-	  @$error=$_REQUEST[error];
+	  $error = isset($_REQUEST['error']) ? $_REQUEST['error'] : null;
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
@@ -43,11 +43,11 @@
 
   <section class="about">
     <p class="about-links">
-      <a href="http://www.ecounselling.tk/" target="_parent">View Main Site</a>
+      <a href="/" target="_parent">View Main Site</a>
       <a href="" target="_parent">Hosting Area</a>
     </p>
     <p class="about-author">
-      &copy; 2013&ndash;2014 <a href="http://www.ecounselling.tk." target="_blank">E Counselling</a> -
+      &copy; 2013&ndash;2014 <a href="/" target="_blank">E Counselling</a> -
       <a href="#" target="_blank">Major Project</a><br>
       Devoloped By<a href="#" target="_blank">Team Suman-subhra-Arnab-Nilotpol </a>
   </section>

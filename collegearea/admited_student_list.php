@@ -258,7 +258,7 @@ else
     <div class="footbox">
      <h2>Administration</h2>
       <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -266,10 +266,10 @@ else
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
   <!-- ####################################################################################################### -->

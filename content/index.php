@@ -19,7 +19,6 @@ else
 <link rel="stylesheet" href="styles/mybuttons.css" type="text/css" />
 <link rel="stylesheet" href="styles/style.css" type="text/css" />
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script type="text/javascript" src="scrolleffect_home.js"></script>
 <script type="text/javascript" src="scripts/jquery.leanModal.min.js"></script>
 <script type="text/javascript" src="scripts/ajaxpageload.js"></script>
@@ -88,9 +87,24 @@ return urlparam[1];
 }
 }
 }
+
+function openInfoPage(url) {
+    var width = Math.min(1480, window.screen.availWidth || 1480);
+    var height = Math.min(1020, window.screen.availHeight || 1020);
+    var popup = window.open(
+        url,
+        '_blank',
+        'width=' + width + ',height=' + height + ',toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0'
+    );
+
+    if (popup) {
+        popup.focus();
+        return false;
+    }
+
+    return true;
+}
 </script>
-<!-- liteAccordion is Homepage Only -->
-<link rel="stylesheet" href="scripts/liteaccordion-v2.2/css/liteaccordion.css" type="text/css" />
 </head>
 <body id="top">
 <div class="wrapper row1">
@@ -108,28 +122,16 @@ return urlparam[1];
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.php">Homepage</a></li>
-      <li><a href="#" onclick="javascript:void window.open('static/counselling_overview.html','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Over View</a></li>
-      <li><a href="#" onclick="javascript:void window.open('static/counselling_rules.html','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Rules</a></li>
+      <li><a href="static/counselling_overview.html" target="_blank" onclick="return openInfoPage(this.href);">Over View</a></li>
+      <li><a href="static/counselling_rules.html" target="_blank" onclick="return openInfoPage(this.href);">Counselling Rules</a></li>
       <li><a href="#">Participating Institutions</a>
         <ul>
-          <li><a href="#" onclick="javascript:void window.open('static/govt_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Goverment Institutions</a></li>
-          <li><a href="#" onclick="javascript:void window.open('static/semi_govt_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Semi Goverment Institutions</a></li>
-          <li><a href="#" onclick="javascript:void window.open('static/self_finance_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Self-Financed Institutions</a></li>
+          <li><a href="static/govt_college.php" target="_blank" onclick="return openInfoPage(this.href);">Goverment Institutions</a></li>
+          <li><a href="static/semi_govt_college.php" target="_blank" onclick="return openInfoPage(this.href);">Semi Goverment Institutions</a></li>
+          <li><a href="static/self_finance_college.php" target="_blank" onclick="return openInfoPage(this.href);">Self-Financed Institutions</a></li>
         </ul>
       </li>
-      <li><a href="#" onclick="javascript:void window.open('counselling_schedule.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Schedules</a></li>
+      <li><a href="counselling_schedule.php" target="_blank" onclick="return openInfoPage(this.href);">Counselling Schedules</a></li>
       <li class="last"><a href="gallery.php">Demo Counselling</a></li>
     </ul>
     <div  class="clear"></div>
@@ -161,6 +163,8 @@ return urlparam[1];
         <div><img src="images/demo/featured-slide/15.jpg" alt="" /></div>
       </li>
     </ol>
+    <button type="button" class="carousel_control carousel_previous" aria-label="Previous slide">&#10094;</button>
+    <button type="button" class="carousel_control carousel_next" aria-label="Next slide">&#10095;</button>
     <!-- ####################################################################################################### -->
   </div>
 </div>
@@ -179,24 +183,12 @@ return urlparam[1];
         <h2 class="title">Quick Links</h2>
         <div id="hpage_quicklinks">
           <ul class="clear">
-            <li><a href="#" onclick="javascript:void window.open('static/counselling_process.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Process</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/eligibility_criteria.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Eligibility Criteria</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/fees_payment.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Fees &amp; Payments</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/document_required.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Document Information</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/allotment_process.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Allotment Process</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/faq.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Frequently Asked Questions</a></li>
+            <li><a href="static/counselling_process.php" target="_blank" onclick="return openInfoPage(this.href);">Counselling Process</a></li>
+            <li><a href="static/eligibility_criteria.php" target="_blank" onclick="return openInfoPage(this.href);">Eligibility Criteria</a></li>
+            <li><a href="static/fees_payment.php" target="_blank" onclick="return openInfoPage(this.href);">Fees &amp; Payments</a></li>
+            <li><a href="static/document_required.php" target="_blank" onclick="return openInfoPage(this.href);">Document Information</a></li>
+            <li><a href="static/allotment_process.php" target="_blank" onclick="return openInfoPage(this.href);">Allotment Process</a></li>
+            <li><a href="static/faq.php" target="_blank" onclick="return openInfoPage(this.href);">Frequently Asked Questions</a></li>
           </ul>
         </div>
         <h2 class="title">Latest News</h2>
@@ -225,6 +217,10 @@ return urlparam[1];
       <div class="fl_right">
 	  
         <h2 class="title">ABOUT E-COUNSELLING SYSTEM </h2>
+
+          <p style="padding:10px;border:1px solid #D99B00;background:#FFF8DC;color:#7A4E00;font-weight:bold;" role="note">
+            Disclaimer: This is a dummy academic major project hosted publicly for demonstration purposes only. It is not an official counselling or admission portal, does not perform any actual JECA examination or counselling functions, and is not affiliated with or endorsed by JECA, WBUT, MAKAUT, or any government or educational authority. Do not submit real personal, academic, or payment information.
+          </p>
         
           <p align="justify">The West Bengal Joint Entrance Examinations Board was formed in the year 1962 for the purpose of holding Common Entrance Examinations for the Undergraduate Level Engineering Courses in the State of West Bengal . This year, the Board has stepped into its Golden Jubilee year. Since last year, the endeavour of the Board has been to enhance the standard of transparency in conducting Common Entrance Examinations for various professional Undergraduate and Postgraduate level courses in the State through effective state-of-the-art technology. Admission through e-Counselling was successfully implemented to admit candidates in the undergraduate level courses in the Engineering & Technological Institutes of the State for the academic year 2012 - 2013.
 For the 2013 - 2014 academic session, the Board will conduct the Common Entrance Examination along with counselling for admission to Undergraduate Courses in Engineering & Technology, Pharmacy and Architecture in Universities, Govt. Colleges and Self-Financed Institutes in the State.
@@ -234,17 +230,10 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
       </div>
     </div>
     <!-- ####################################################################################################### -->
-    <?php 
-	require "connect.inc.php";
-	$sql_d="select * from seat_allotments";
-	$res_d=mysql_query($sql_d);
-	$coun_d=mysql_num_rows($res_d);
-	
-	?>
     <div id ="extream_right">
      <h2 class="title">Login Section</h2>
     <div id="logins">
-    <a href="candidate registration 1.php" class="loginbutton" style="color: #ffffff" onclick=<?php if($coun_d != 0 ){echo "'return false'";}else{}?> >New User Register Here</a>
+    <a href="candidate registration 1.php" class="loginbutton" style="color: #ffffff">New User Register Here</a>
      <div id="modalbutton">
     <a href="#loginmodal" class="loginbutton" id="modaltrigger" style="color: #ffffff">Sign In</a>
     
@@ -324,7 +313,7 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
     <div class="footbox">
       <h2>Administration</h2>
       <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -332,10 +321,10 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
     <!-- ####################################################################################################### -->
@@ -348,26 +337,46 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
     <p class="fl_right">Design and Devoloped By<a href="#" title="Free Website Templates">&nbsp; &nbsp;Arnab Nilotpol Subhrajyoti and Suman</a></p>
   </div>
 </div>
-<!-- liteAccordion is Homepage Only -->
-<script type="text/javascript" src="scripts/liteaccordion-v2.2/js/liteaccordion.jquery.min.js"></script>
 <script type="text/javascript">
-$("#featured_slide").liteAccordion({
-    theme: "os-tpl",
-	
-    containerWidth: 960, // fixed (px)
-    containerHeight: 360, // fixed (px) - overall height of the slider
-    headerWidth: 48, // fixed (px) - slide spine title
+(function () {
+    var carousel = document.getElementById('featured_slide');
+    var slides = carousel ? carousel.querySelectorAll('ol > li') : [];
+    var current = 0;
+    var timer;
 
-    firstSlide: 1, // displays slide (n) on page load
-	activateOn: "click", // click or mouseover
-    autoPlay: false, // automatically cycle through slides
-    pauseOnHover: true, // pause slides on hover
-    rounded: false, // square or rounded corners
-    enumerateSlides: true, // put numbers on slides
+    if (!slides.length) {
+        return;
+    }
 
-    slideSpeed: 800, // slide animation speed
-    cycleSpeed: 6000, // time between slide cycles
-});
+    carousel.className += ' carousel_ready';
+
+    function showSlide(index) {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].className = i === index ? 'active' : '';
+            slides[i].setAttribute('aria-hidden', i === index ? 'false' : 'true');
+        }
+        current = index;
+    }
+
+    function restart() {
+        window.clearInterval(timer);
+        timer = window.setInterval(function () {
+            showSlide((current + 1) % slides.length);
+        }, 6000);
+    }
+
+    carousel.querySelector('.carousel_previous').onclick = function () {
+        showSlide((current + slides.length - 1) % slides.length);
+        restart();
+    };
+    carousel.querySelector('.carousel_next').onclick = function () {
+        showSlide((current + 1) % slides.length);
+        restart();
+    };
+
+    showSlide(0);
+    restart();
+}());
 </script>
 </body>
 </html>

@@ -67,7 +67,7 @@ echo "<tr>
 <div align="center">
 Generated @ e-counselling System
 <br>
-© <a href="http://www.ecounselling.tk/">www.ecounselling.tk</a>
+© <a href="/">www.ecounselling.tk</a>
 <br><br>
 </div>
 </div>

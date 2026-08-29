@@ -1,6 +1,8 @@
 <?php
-session_start();
-if ($_SESSION['userlogged']!="1")
+if (session_status() !== PHP_SESSION_ACTIVE) {
+	session_start();
+}
+if (empty($_SESSION['userlogged']))
 {
 	header("location:login.php");
 }
@@ -98,8 +100,8 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
     <div class="menu">
     <ul>
     <li><a href="index.php" class="selected">Admin Home</a></li>
-    <li><a href="http://ecounselling.tk/collegearea/" target="new">View College Area</a></li>
-    <li><a href="http://ecounselling.tk" target="new">View Main Site</a></li>
+    <li><a href="/collegearea/" target="new">View College Area</a></li>
+    <li><a href="/" target="new">View Main Site</a></li>
     <li><a  id="e1" href="#">E-mail Service</a></li>
     </ul>
     </div>

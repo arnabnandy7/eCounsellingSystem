@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php require_once dirname(__DIR__) . '/includes/auth.php'; ?>
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
@@ -12,6 +13,7 @@
 	
 	<br>
 	<form action="counselling.php" method="post" name="frm1" id="frm1">
+			<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8'); ?>" />
 			
 				<table width="318" height="58" id="registertable" align="center">
 			<tr>
@@ -26,7 +28,8 @@
   </form>
          <br>
          <br>
-         	<form action="counselling_2nd.php" method="post" name="frm1" id="frm1">
+		<form action="counselling_2nd.php" method="post" name="frm1" id="frm1">
+			<input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars(auth_csrf_token(), ENT_QUOTES, 'UTF-8'); ?>" />
 			
 				<table width="318" height="58" id="registertable" align="center">
 			<tr>

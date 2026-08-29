@@ -1,4 +1,9 @@
-<?
+<?php
+// This obsolete hosting-provider directory listing exposed internal files and
+// relies on PHP settings that are disabled in the deployed runtime.
+header('Location: /admin/');
+exit;
+
 header('Content-Type: text/html; charset=utf-8');
 $host = $_SERVER['HTTP_HOST'];
 setlocale(LC_TIME, "in_IN.utf8");
@@ -80,7 +85,7 @@ if($_GET['dir']) {
 	}
 	
 	$dirok = true;
-	$dirnames = split('/', $_GET['dir']);
+	$dirnames = explode('/', $_GET['dir']);
 	for($di=0; $di<sizeof($dirnames); $di++) {
 		
 		if($di<(sizeof($dirnames)-2)) {
