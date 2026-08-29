@@ -2,6 +2,10 @@
 
 A user-friendly, GUI-based online counselling platform designed to streamline the admission process for the Master of Computer Applications (MCA) course. This system aims to replace traditional offline counselling methods with a more efficient, transparent, and accessible online solution.
 
+## Original Project Submission
+
+The original submitted version of this project is preserved at commit [`49fea84a10faa3f8ba8d0325fd4ac5b8fd2df7df`](https://github.com/arnabnandy7/eCounsellingSystem/tree/49fea84a10faa3f8ba8d0325fd4ac5b8fd2df7df). This pinned reference predates the subsequent migration and deployment changes.
+
 ---
 
 ## 🚀 Purpose
