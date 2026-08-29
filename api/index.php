@@ -23,7 +23,6 @@ $disabledFeatures = array(
     'collegearea/check-college-forgot-password.php',
     'collegearea/college-forgot-password.php',
     'collegearea/create_login.php',
-    'collegearea/report_problem.php',
     'content/college.php',
     'content/forgot_password.php',
     'content/forgot_password_process.php',

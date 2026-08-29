@@ -15,6 +15,14 @@
 <link rel="stylesheet" href="styles/prettyPhoto.css" type="text/css" />
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
 
+<style type="text/css">
+#video_modal{display:none;position:fixed;z-index:10000;inset:0;background:rgba(0,0,0,.85);}
+#video_modal.is-open{display:block;}
+#video_dialog{position:relative;width:90%;max-width:900px;margin:6vh auto;background:#000;box-shadow:0 0 24px #000;}
+#video_frame{display:block;width:100%;aspect-ratio:16/9;border:0;}
+#video_close{position:absolute;z-index:1;top:-18px;right:-18px;width:40px;height:40px;border:2px solid #fff;border-radius:50%;background:#222;color:#fff;font:bold 25px/32px Arial;cursor:pointer;}
+</style>
+
 
 <script type="text/javascript">
 $(document).ready(function(e) {
@@ -32,6 +40,31 @@ $(document).ready(function(e) {
 $(document).ready(function () {
     $("a[rel^='prettyPhoto']").prettyPhoto({
         theme: 'dark_rounded'
+    });
+
+    $('#video_link').click(function (event) {
+        event.preventDefault();
+        $('#video_frame').attr('src', 'https://www.youtube.com/embed/eg6xWn8C3eI?autoplay=1&rel=0');
+        $('#video_modal').addClass('is-open').attr('aria-hidden', 'false');
+        $('#video_close').focus();
+    });
+
+    function closeVideo() {
+        $('#video_modal').removeClass('is-open').attr('aria-hidden', 'true');
+        $('#video_frame').attr('src', '');
+        $('#video_link').focus();
+    }
+
+    $('#video_close').click(closeVideo);
+    $('#video_modal').click(function (event) {
+        if (event.target === this) {
+            closeVideo();
+        }
+    });
+    $(document).keydown(function (event) {
+        if (event.keyCode === 27 && $('#video_modal').hasClass('is-open')) {
+            closeVideo();
+        }
     });
 });
 </script>
@@ -102,7 +135,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
         </div>
         <div class="fl_right">
           <ul style="width:150px">
-            <li ><a href="https://www.youtube.com/watch?v=eg6xWn8C3eI" rel="prettyPhoto[gallery1]" title="Video 1"><img src="/stepbystepguidence/stp.jpg" alt="" /></a></li>
+            <li><a id="video_link" href="https://www.youtube.com/watch?v=eg6xWn8C3eI" title="Play counselling guidance video"><img src="/stepbystepguidence/stp.jpg" alt="Play counselling guidance video" /></a></li>
       
           </ul>
         </div>
@@ -115,6 +148,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
    
     <!-- ####################################################################################################### -->
     <div class="clear"></div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div id="video_modal" role="dialog" aria-modal="true" aria-label="Counselling guidance video" aria-hidden="true">
+  <div id="video_dialog">
+    <button id="video_close" type="button" aria-label="Close video">&times;</button>
+    <iframe id="video_frame" title="Counselling guidance video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
   </div>
 </div>
 <!-- ####################################################################################################### -->
