@@ -87,6 +87,23 @@ return urlparam[1];
 }
 }
 }
+
+function openInfoPage(url) {
+    var width = Math.min(1480, window.screen.availWidth || 1480);
+    var height = Math.min(1020, window.screen.availHeight || 1020);
+    var popup = window.open(
+        url,
+        '_blank',
+        'width=' + width + ',height=' + height + ',toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0'
+    );
+
+    if (popup) {
+        popup.focus();
+        return false;
+    }
+
+    return true;
+}
 </script>
 </head>
 <body id="top">
@@ -105,16 +122,16 @@ return urlparam[1];
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.php">Homepage</a></li>
-      <li><a href="static/counselling_overview.html">Over View</a></li>
-      <li><a href="static/counselling_rules.html">Counselling Rules</a></li>
+      <li><a href="static/counselling_overview.html" target="_blank" onclick="return openInfoPage(this.href);">Over View</a></li>
+      <li><a href="static/counselling_rules.html" target="_blank" onclick="return openInfoPage(this.href);">Counselling Rules</a></li>
       <li><a href="#">Participating Institutions</a>
         <ul>
-          <li><a href="static/govt_college.php">Goverment Institutions</a></li>
-          <li><a href="static/semi_govt_college.php">Semi Goverment Institutions</a></li>
-          <li><a href="static/self_finance_college.php">Self-Financed Institutions</a></li>
+          <li><a href="static/govt_college.php" target="_blank" onclick="return openInfoPage(this.href);">Goverment Institutions</a></li>
+          <li><a href="static/semi_govt_college.php" target="_blank" onclick="return openInfoPage(this.href);">Semi Goverment Institutions</a></li>
+          <li><a href="static/self_finance_college.php" target="_blank" onclick="return openInfoPage(this.href);">Self-Financed Institutions</a></li>
         </ul>
       </li>
-      <li><a href="counselling_schedule.php">Counselling Schedules</a></li>
+      <li><a href="counselling_schedule.php" target="_blank" onclick="return openInfoPage(this.href);">Counselling Schedules</a></li>
       <li class="last"><a href="gallery.php">Demo Counselling</a></li>
     </ul>
     <div  class="clear"></div>
@@ -166,12 +183,12 @@ return urlparam[1];
         <h2 class="title">Quick Links</h2>
         <div id="hpage_quicklinks">
           <ul class="clear">
-            <li><a href="static/counselling_process.php">Counselling Process</a></li>
-            <li><a href="static/eligibility_criteria.php">Eligibility Criteria</a></li>
-            <li><a href="static/fees_payment.php">Fees &amp; Payments</a></li>
-            <li><a href="static/document_required.php">Document Information</a></li>
-            <li><a href="static/allotment_process.php">Allotment Process</a></li>
-            <li><a href="static/faq.php">Frequently Asked Questions</a></li>
+            <li><a href="static/counselling_process.php" target="_blank" onclick="return openInfoPage(this.href);">Counselling Process</a></li>
+            <li><a href="static/eligibility_criteria.php" target="_blank" onclick="return openInfoPage(this.href);">Eligibility Criteria</a></li>
+            <li><a href="static/fees_payment.php" target="_blank" onclick="return openInfoPage(this.href);">Fees &amp; Payments</a></li>
+            <li><a href="static/document_required.php" target="_blank" onclick="return openInfoPage(this.href);">Document Information</a></li>
+            <li><a href="static/allotment_process.php" target="_blank" onclick="return openInfoPage(this.href);">Allotment Process</a></li>
+            <li><a href="static/faq.php" target="_blank" onclick="return openInfoPage(this.href);">Frequently Asked Questions</a></li>
           </ul>
         </div>
         <h2 class="title">Latest News</h2>
