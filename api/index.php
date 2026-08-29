@@ -4,6 +4,14 @@ $root = dirname(__DIR__);
 require_once $root . '/includes/turso_mysql_compat.php';
 require_once $root . '/includes/auth.php';
 
+// Vercel's PHP runtime may tear down outbound networking before PHP performs
+// its implicit session shutdown. Flush Turso-backed sessions explicitly first.
+register_shutdown_function(function () {
+    if (session_status() === PHP_SESSION_ACTIVE) {
+        session_write_close();
+    }
+});
+
 $path = isset($_GET['path']) ? ltrim($_GET['path'], '/') : '';
 $path = $path === '' ? 'index.php' : $path;
 

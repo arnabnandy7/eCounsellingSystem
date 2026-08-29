@@ -238,7 +238,10 @@ final class TursoSessionHandler implements SessionHandlerInterface
     public function read(string $id): string|false
     {
         $id = preg_replace('/[^a-zA-Z0-9,-]/', '', $id);
-        $result = mysql_query("SELECT payload FROM app_sessions WHERE id = '$id' AND expires_at > " . time());
+        $result = turso_query(
+            'SELECT payload FROM app_sessions WHERE id = ? AND expires_at > ?',
+            array($id, time())
+        );
         $row = $result ? mysql_fetch_row($result) : false;
         return $row ? base64_decode($row[0], true) : '';
     }
@@ -248,15 +251,19 @@ final class TursoSessionHandler implements SessionHandlerInterface
         $id = preg_replace('/[^a-zA-Z0-9,-]/', '', $id);
         $payload = base64_encode($data);
         $expiresAt = time() + (int) ini_get('session.gc_maxlifetime');
-        $sql = "INSERT INTO app_sessions (id, payload, expires_at) VALUES ('$id', '$payload', $expiresAt) "
+        $sql = 'INSERT INTO app_sessions (id, payload, expires_at) VALUES (?, ?, ?) '
             . "ON CONFLICT(id) DO UPDATE SET payload = excluded.payload, expires_at = excluded.expires_at";
-        return mysql_query($sql) !== false;
+        $written = turso_query($sql, array($id, $payload, $expiresAt)) !== false;
+        if (!$written) {
+            error_log('Turso session write failed: ' . mysql_error());
+        }
+        return $written;
     }
 
     public function destroy(string $id): bool
     {
         $id = preg_replace('/[^a-zA-Z0-9,-]/', '', $id);
-        return mysql_query("DELETE FROM app_sessions WHERE id = '$id'") !== false;
+        return turso_query('DELETE FROM app_sessions WHERE id = ?', array($id)) !== false;
     }
 
     public function gc(int $maxLifetime): int|false
