@@ -12,14 +12,7 @@
 						}
 ?>
 <?php
-if(!empty($_GET))
-{
-	$error=$_GET['error'];
-}
-else
-{
-	$error="";
-}
+$error = isset($_GET['error']) ? $_GET['error'] : '';
 ?>
 <?php 
 	include "connect.inc.php";

@@ -1,4 +1,8 @@
 <?php
+$id = '';
+$email = '';
+$suc = '';
+
 if(!empty($_GET))
 {
 	if(!empty($_GET["key"]))
@@ -18,12 +22,10 @@ if(!empty($_GET))
 		{
 			//header("location:index.php");	
 		}
-		$suc='';
 	}
-	elseif($_GET["err"])
+	elseif(!empty($_GET["err"]))
 	{
 		$suc=$_GET["err"];
-		$id="";
 	}
 	else
 	{
@@ -32,6 +34,7 @@ if(!empty($_GET))
 else
 {
 	header("location:index.php");
+	exit;
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
