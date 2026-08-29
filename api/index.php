@@ -64,7 +64,6 @@ $candidatePaths = array(
     'content/change_candidate_contact.php',
     'content/change_candidate_password.php',
     'content/download_allotment.php',
-    'content/gallery.php',
     'content/load.php',
     'content/logout.php',
     'content/seat_status.php',

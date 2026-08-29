@@ -19,7 +19,6 @@ else
 <link rel="stylesheet" href="styles/mybuttons.css" type="text/css" />
 <link rel="stylesheet" href="styles/style.css" type="text/css" />
 <script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script type="text/javascript" src="scrolleffect_home.js"></script>
 <script type="text/javascript" src="scripts/jquery.leanModal.min.js"></script>
 <script type="text/javascript" src="scripts/ajaxpageload.js"></script>
@@ -108,28 +107,16 @@ return urlparam[1];
   <div id="topnav">
     <ul>
       <li class="active"><a href="index.php">Homepage</a></li>
-      <li><a href="#" onclick="javascript:void window.open('static/counselling_overview.html','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Over View</a></li>
-      <li><a href="#" onclick="javascript:void window.open('static/counselling_rules.html','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Rules</a></li>
+      <li><a href="static/counselling_overview.html">Over View</a></li>
+      <li><a href="static/counselling_rules.html">Counselling Rules</a></li>
       <li><a href="#">Participating Institutions</a>
         <ul>
-          <li><a href="#" onclick="javascript:void window.open('static/govt_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Goverment Institutions</a></li>
-          <li><a href="#" onclick="javascript:void window.open('static/semi_govt_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Semi Goverment Institutions</a></li>
-          <li><a href="#" onclick="javascript:void window.open('static/self_finance_college.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Self-Financed Institutions</a></li>
+          <li><a href="static/govt_college.php">Goverment Institutions</a></li>
+          <li><a href="static/semi_govt_college.php">Semi Goverment Institutions</a></li>
+          <li><a href="static/self_finance_college.php">Self-Financed Institutions</a></li>
         </ul>
       </li>
-      <li><a href="#" onclick="javascript:void window.open('counselling_schedule.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Schedules</a></li>
+      <li><a href="counselling_schedule.php">Counselling Schedules</a></li>
       <li class="last"><a href="gallery.php">Demo Counselling</a></li>
     </ul>
     <div  class="clear"></div>
@@ -179,24 +166,12 @@ return urlparam[1];
         <h2 class="title">Quick Links</h2>
         <div id="hpage_quicklinks">
           <ul class="clear">
-            <li><a href="#" onclick="javascript:void window.open('static/counselling_process.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Counselling Process</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/eligibility_criteria.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Eligibility Criteria</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/fees_payment.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Fees &amp; Payments</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/document_required.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Document Information</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/allotment_process.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Allotment Process</a></li>
-            <li><a href="#" onclick="javascript:void window.open('static/faq.php','1389728149356',
-'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
-);return false;">Frequently Asked Questions</a></li>
+            <li><a href="static/counselling_process.php">Counselling Process</a></li>
+            <li><a href="static/eligibility_criteria.php">Eligibility Criteria</a></li>
+            <li><a href="static/fees_payment.php">Fees &amp; Payments</a></li>
+            <li><a href="static/document_required.php">Document Information</a></li>
+            <li><a href="static/allotment_process.php">Allotment Process</a></li>
+            <li><a href="static/faq.php">Frequently Asked Questions</a></li>
           </ul>
         </div>
         <h2 class="title">Latest News</h2>
@@ -351,6 +326,7 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
 <!-- liteAccordion is Homepage Only -->
 <script type="text/javascript" src="scripts/liteaccordion-v2.2/js/liteaccordion.jquery.min.js"></script>
 <script type="text/javascript">
+$(function () {
 $("#featured_slide").liteAccordion({
     theme: "os-tpl",
 	
@@ -360,13 +336,14 @@ $("#featured_slide").liteAccordion({
 
     firstSlide: 1, // displays slide (n) on page load
 	activateOn: "click", // click or mouseover
-    autoPlay: false, // automatically cycle through slides
+    autoPlay: true, // automatically cycle through slides
     pauseOnHover: true, // pause slides on hover
     rounded: false, // square or rounded corners
     enumerateSlides: true, // put numbers on slides
 
     slideSpeed: 800, // slide animation speed
     cycleSpeed: 6000, // time between slide cycles
+});
 });
 </script>
 </body>
