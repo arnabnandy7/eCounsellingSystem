@@ -93,7 +93,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
  
   <div id="topnav">
     <ul>
-       <li class="active"><a href="candidate_home.php">Homepage</a></li>
+       <li class="active"><a href="<?php echo loggedin() ? 'candidate_home.php' : 'index.php'; ?>">Homepage</a></li>
       <li><a href="#" onclick="javascript:void window.open('static/counselling_overview.html','1389728149356',
 'width=1480,height=1020,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=0,left=0,top=0'
 );return false;">Over View</a></li>
