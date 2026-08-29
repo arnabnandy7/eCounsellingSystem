@@ -97,12 +97,12 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
         <div class="fl_left">
           <h2 class="title">Counselling Step by Step Procedure</h2>
           <p style="color:#0E64C0; font-size:16px">Watch this video guidence for effective uses. You Can also download step by step guidence in PDF format.</p><br />
-          <p align="center" style="color:#0E64C0;font-size:16px"><a href="http://ecounselling.tk/stepbystepguidence/STEP%20BY%20STEP%20GUIDANCE.pdf" style="text-decoration:none; color:#0E64C0" target="_blank">Click Here to Download</a></p>
+          <p align="center" style="color:#0E64C0;font-size:16px"><a href="/stepbystepguidence/STEP%20BY%20STEP%20GUIDANCE.pdf" style="text-decoration:none; color:#0E64C0" target="_blank">Click Here to Download</a></p>
           
         </div>
         <div class="fl_right">
           <ul style="width:150px">
-            <li ><a href="https://www.youtube.com/watch?v=eg6xWn8C3eI" rel="prettyPhoto[gallery1]" title="Video 1"><img src="http://ecounselling.tk/stepbystepguidence/stp.jpg" alt="" /></a></li>
+            <li ><a href="https://www.youtube.com/watch?v=eg6xWn8C3eI" rel="prettyPhoto[gallery1]" title="Video 1"><img src="/stepbystepguidence/stp.jpg" alt="" /></a></li>
       
           </ul>
         </div>
@@ -137,7 +137,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
     <div class="footbox">
       <h2>Administration</h2>
      <ul>
-        <li><a href="http://admin.ecounselling.tk" target="new">Login</a></li>
+        <li><a href="/admin/login.php" target="new">Login</a></li>
         <li><a href="#">Freedom of Information</a></li>
         <li><a href="#">Website Privacy</a></li>
       </ul>
@@ -145,10 +145,10 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
     <div class="footbox">
       <h2>Institute Area</h2>
       <ul>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Universities and Colleges</a></li>
-        <li><a href="http://ecounselling.tk/collegearea" target="new">Institute Login</a></li>
+        <li><a href="/collegearea/" target="new">Universities and Colleges</a></li>
+        <li><a href="/collegearea/" target="new">Institute Login</a></li>
         <li><a href="#">Counselling Activities</a></li>
-        <li class="last"><a href="http://admin.ecounselling.tk" target="new">Counsil Area</a></li>
+        <li class="last"><a href="/admin/login.php" target="new">Counsil Area</a></li>
       </ul>
     </div>
     <!-- ####################################################################################################### -->

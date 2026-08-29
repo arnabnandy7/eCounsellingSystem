@@ -28,7 +28,7 @@ contact us though email mailto: <a href="#">info@ecounselling.tk</a>
 <div align="center">
 Generated @ e-counselling System
 <br>
-© <a href="http://www.ecounselling.tk/">www.ecounselling.tk</a>
+© <a href="/">www.ecounselling.tk</a>
 <br><br>
 </div>
 </div>

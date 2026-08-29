@@ -10,9 +10,10 @@ else
 ?>
 <?php
 require "connect.inc.php";   
-$query = "SELECT * FROM candidate_preferences order by rank ASC";
+$query = "SELECT COUNT(*) AS total FROM candidate_preferences";
 $result = mysql_query($query);
-$numrows = mysql_num_rows($result);
+$countRow = $result ? mysql_fetch_array($result) : false;
+$numrows = $countRow ? (int) $countRow['total'] : 0;
 
 $rows_per_page = 10;
 $lastpage      = ceil($numrows/$rows_per_page);
@@ -73,7 +74,14 @@ $(window).load(function() {
 <?php
  require "connect.inc.php";   
  $limit = 'LIMIT ' .($pageno - 1) * $rows_per_page .',' .$rows_per_page;
-$query1 = "SELECT * FROM candidate_preferences order by rank ASC $limit";
+$query1 = "SELECT p.rank, r.candidate_name, p.pref_1, p.pref_2, p.pref_3, "
+    . "c1.college_name AS pref_1_name, c2.college_name AS pref_2_name, c3.college_name AS pref_3_name "
+    . "FROM candidate_preferences p "
+    . "JOIN rank_details r ON r.rank=p.rank "
+    . "JOIN college_details c1 ON c1.college_cuid=p.pref_1 "
+    . "JOIN college_details c2 ON c2.college_cuid=p.pref_2 "
+    . "JOIN college_details c3 ON c3.college_cuid=p.pref_3 "
+    . "ORDER BY p.rank ASC $limit";
 $result1 = mysql_query($query1);
 ?>
     <h2>Candidate College Preference</h2> 
@@ -97,24 +105,10 @@ $result1 = mysql_query($query1);
 		{
     	echo "<tr class='even'>";
         echo "<td>".$row['rank']."</td>";
-		$query2 = "SELECT * FROM rank_details where rank=$row[rank]";
-		$result2 = mysql_query($query2);
-		$row2=mysql_fetch_array($result2);
-		echo "<td>".$row2['candidate_name']."</td>";
-		$query3 = "SELECT * FROM college_details where college_cuid=$row[pref_1]";
-		$result3 = mysql_query($query3);
-		$row3=mysql_fetch_array($result3);
-		echo "<td>".$row3['college_name']." [ ".$row['pref_1']." ]"."</td>";
-		
-		$query4 = "SELECT * FROM college_details where college_cuid=$row[pref_2]";
-		$result4 = mysql_query($query4);
-		$row4=mysql_fetch_array($result4);
-		echo "<td>".$row4['college_name']." [ ".$row['pref_2']." ]"."</td>";
-		
-		$query5 = "SELECT * FROM college_details where college_cuid=$row[pref_3]";
-		$result5 = mysql_query($query5);
-		$row5=mysql_fetch_array($result5);
-		echo "<td>".$row5['college_name']." [ ".$row['pref_3']." ]"."</td>";
+		echo "<td>".$row['candidate_name']."</td>";
+		echo "<td>".$row['pref_1_name']." [ ".$row['pref_1']." ]"."</td>";
+		echo "<td>".$row['pref_2_name']." [ ".$row['pref_2']." ]"."</td>";
+		echo "<td>".$row['pref_3_name']." [ ".$row['pref_3']." ]"."</td>";
             
         echo "</tr>";
 		}
