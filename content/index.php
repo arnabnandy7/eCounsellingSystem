@@ -88,8 +88,6 @@ return urlparam[1];
 }
 }
 </script>
-<!-- liteAccordion is Homepage Only -->
-<link rel="stylesheet" href="scripts/liteaccordion-v2.2/css/liteaccordion.css" type="text/css" />
 </head>
 <body id="top">
 <div class="wrapper row1">
@@ -148,6 +146,8 @@ return urlparam[1];
         <div><img src="images/demo/featured-slide/15.jpg" alt="" /></div>
       </li>
     </ol>
+    <button type="button" class="carousel_control carousel_previous" aria-label="Previous slide">&#10094;</button>
+    <button type="button" class="carousel_control carousel_next" aria-label="Next slide">&#10095;</button>
     <!-- ####################################################################################################### -->
   </div>
 </div>
@@ -323,28 +323,46 @@ The Office of the Board functions from AQ-13/1, Sector-V, Salt Lake City, Kolkat
     <p class="fl_right">Design and Devoloped By<a href="#" title="Free Website Templates">&nbsp; &nbsp;Arnab Nilotpol Subhrajyoti and Suman</a></p>
   </div>
 </div>
-<!-- liteAccordion is Homepage Only -->
-<script type="text/javascript" src="scripts/liteaccordion-v2.2/js/liteaccordion.jquery.min.js"></script>
 <script type="text/javascript">
-$(function () {
-$("#featured_slide").liteAccordion({
-    theme: "os-tpl",
-	
-    containerWidth: 960, // fixed (px)
-    containerHeight: 360, // fixed (px) - overall height of the slider
-    headerWidth: 48, // fixed (px) - slide spine title
+(function () {
+    var carousel = document.getElementById('featured_slide');
+    var slides = carousel ? carousel.querySelectorAll('ol > li') : [];
+    var current = 0;
+    var timer;
 
-    firstSlide: 1, // displays slide (n) on page load
-	activateOn: "click", // click or mouseover
-    autoPlay: true, // automatically cycle through slides
-    pauseOnHover: true, // pause slides on hover
-    rounded: false, // square or rounded corners
-    enumerateSlides: true, // put numbers on slides
+    if (!slides.length) {
+        return;
+    }
 
-    slideSpeed: 800, // slide animation speed
-    cycleSpeed: 6000, // time between slide cycles
-});
-});
+    carousel.className += ' carousel_ready';
+
+    function showSlide(index) {
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].className = i === index ? 'active' : '';
+            slides[i].setAttribute('aria-hidden', i === index ? 'false' : 'true');
+        }
+        current = index;
+    }
+
+    function restart() {
+        window.clearInterval(timer);
+        timer = window.setInterval(function () {
+            showSlide((current + 1) % slides.length);
+        }, 6000);
+    }
+
+    carousel.querySelector('.carousel_previous').onclick = function () {
+        showSlide((current + slides.length - 1) % slides.length);
+        restart();
+    };
+    carousel.querySelector('.carousel_next').onclick = function () {
+        showSlide((current + 1) % slides.length);
+        restart();
+    };
+
+    showSlide(0);
+    restart();
+}());
 </script>
 </body>
 </html>
